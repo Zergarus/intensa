@@ -1,0 +1,25 @@
+0
+
+2
+
+2
+
+2
+
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
