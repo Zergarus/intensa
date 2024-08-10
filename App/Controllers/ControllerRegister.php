@@ -16,12 +16,8 @@ class ControllerRegister extends Controller
         if (!empty($_POST)) {
 
            $res = $this->model->add($_POST);
-           file_put_contents(__DIR__ . '/logDB.txt', $res, FILE_APPEND);
-
            if ($res) {
-               echo json_encode(['success' => true]);
-//               $this->redirect("/");
-//               exit();
+               echo json_encode($res);
            }
 
 
