@@ -14,6 +14,9 @@ class Route
         // получаем имя контроллера
         if (!empty($routes[1])) {
             $controller_name = $routes[1];
+            if (strpos($controller_name, "?")) {
+                $controller_name = substr($controller_name, 0, strpos($controller_name, '?'));
+            }
         }
 
         // получаем имя экшена

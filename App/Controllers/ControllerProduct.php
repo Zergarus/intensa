@@ -17,14 +17,11 @@ class ControllerProduct extends Controller
         if (!empty($_GET)) {
 
            $data = $this->model->getProductById($_GET["id"]);
-           if ($res) {
-               echo json_encode($res);
-           }
-           $this->view->generate('register_view.php', 'template_view.php');
-
-
+           if (!empty($data)) {
+            $this->view->generate('product_view.php', 'template_view.php', $data);
+        }
         } else {
-            $this->view->generate('register_view.php', 'template_view.php');
+            $this->view->generate('product_view.php', 'template_view.php');
         }
     }
 
