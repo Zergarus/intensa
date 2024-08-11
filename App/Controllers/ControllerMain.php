@@ -14,7 +14,11 @@ class ControllerMain extends Controller
 
     function action_index()
     {
-        $data = $this->model->getList();
+        if (!empty($_GET)){
+            $data = $this->model->getList($_GET["sort"]);
+        } else {
+            $data = $this->model->getList();
+        }
         $this->view->generate('main_view.php', 'template_view.php', $data);
     }
 }

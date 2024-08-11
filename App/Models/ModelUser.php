@@ -14,7 +14,7 @@ class ModelUser extends Model
         $this->db = new \PDO("mysql:host=db;dbname=php_docker", "php_docker", "password");
     }
 
-    public function getList()
+    public function getList($sort = null)
     {
 
     }

@@ -2,7 +2,7 @@
 namespace Core;
 class Model
 {
-    protected function getList(){}
+    protected function getList($sort = null){}
     protected function add(array $data){}
 
 }

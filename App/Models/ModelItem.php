@@ -14,11 +14,21 @@ class ModelItem extends Model
         $this->db = new \PDO("mysql:host=db;dbname=php_docker", "php_docker", "password");
     }
 
-    public function getList()
+    public function getList($sort = null)
     {
         $arResult = [];
         try {
-            $sql = "SELECT * FROM items";
+            switch ($sort) {
+                case 'rate':
+                    $sql = "SELECT * FROM items ORDER BY rating DESC";
+                    break;
+                case 'date':
+                    $sql = "SELECT * FROM items ORDER BY date_create DESC";
+                    break;
+                default:
+                    $sql = "SELECT * FROM items";
+                    break;
+            }
             $stmt = $this->db->prepare($sql);
             $stmt->execute();
             if ($stmt->rowCount() > 0) {
@@ -28,6 +38,7 @@ class ModelItem extends Model
                         "TITLE" => $arItem["title"],
                         "TITLE_DESCRIPTION" => $arItem["title_description"],
                         "PHOTO" => $arItem["photo"],
+                        "RATING" => $arItem["rating"],
                     ];
                 }
             }

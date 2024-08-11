@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: db:3306
--- Время создания: Авг 07 2024 г., 18:11
+-- Время создания: Авг 11 2024 г., 20:22
 -- Версия сервера: 9.0.1
 -- Версия PHP: 8.2.8
 
@@ -38,7 +38,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`) VALUES
-(1, 'artikaruban@gmai.com', '$2y$12$b9qM0.2L3ebl9dCwPYSUyuqFHrmB3ZcEFkbS5IO/yPcmZsCOsJeb6');
+(1, 'artikaruban@gmai.com', '$2y$12$b9qM0.2L3ebl9dCwPYSUyuqFHrmB3ZcEFkbS5IO/yPcmZsCOsJeb6'),
+(2, 'test@test', '$2y$12$koY4EECLaqkotL2FLKy0genj9IEiq0tK4vL.9LgHoqikj4KQWca16'),
+(3, 'test2@test2', '$2y$12$2FrHEj27yfyZTjfHXNLEfuKj9UfsmtaTNYQY1QRXN4EpX8criScCq');
 
 --
 -- Индексы сохранённых таблиц
@@ -58,7 +60,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

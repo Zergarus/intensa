@@ -16,9 +16,10 @@ class Route
             $controller_name = $routes[1];
             if (strpos($controller_name, "?")) {
                 $controller_name = substr($controller_name, 0, strpos($controller_name, '?'));
+            } elseif (strpos($controller_name, "?") === 0) {
+                $controller_name = "Main";
             }
         }
-
         // получаем имя экшена
         if (!empty($routes[2])) {
             $action_name = $routes[2];
