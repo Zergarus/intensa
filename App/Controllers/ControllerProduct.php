@@ -4,6 +4,7 @@ use \Core\Controller;
 use \Core\View;
 use \App\Models\ModelUser;
 use \App\Models\ModelItem;
+use \App\Models\ModelReview;
 class ControllerProduct extends Controller
 {
     function __construct()
@@ -15,11 +16,13 @@ class ControllerProduct extends Controller
     function action_index(): void
     {
         if (!empty($_GET)) {
-
-           $data = $this->model->getProductById($_GET["id"]);
-           if (!empty($data)) {
-            $this->view->generate('product_view.php', 'template_view.php', $data);
-        }
+            
+            $data = $this->model->getProductById($_GET["id"]);
+            $objReview = new ModelReview();
+            $data["reviews"] = $objReview->getReviewsByItemId($_GET["id"]);
+            if (!empty($data)) {
+                $this->view->generate('product_view.php', 'template_view.php', $data);
+            }
         } else {
             $this->view->generate('product_view.php', 'template_view.php');
         }
