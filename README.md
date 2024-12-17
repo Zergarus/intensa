@@ -1,4 +1,4 @@
-# Тестовое задание
+# Pet-проект
 
 Для запуска потребуется Docker
 - docker-compose build
